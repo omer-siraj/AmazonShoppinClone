@@ -5,158 +5,173 @@
 }
 
 .header__container {
+  background-color: #1a1a1a;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: 70px;
+}
+
+.logo__container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #131921;
-  color: white;
-  gap: 20px;
-  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 250px;
 }
 
-/* Logo */
 .logo__container img {
-  width: 100px;
-  object-fit: contain;
+  width: 80%;
+  padding-top: 5px;
+  margin-left: 20px;
+  vertical-align: middle;
 }
 
-/* Delivery Section */
 .delivery {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 3px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.delivery p,
+.delivery span {
+  font-size: 10px;
   color: white;
 }
 
-.delivery svg {
-  font-size: 20px;
-}
-
-.delivery p {
-  font-size: 11px;
-  line-height: 1;
-  margin-bottom: 2px;
-}
-
-.delivery span:last-child {
-  font-size: 14px;
-  font-weight: 600;
-}
-
-/* Search Bar */
 .search {
   display: flex;
-  flex: 1;
-  max-width: 600px;
-  background-color: white;
-  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
   overflow: hidden;
-  height: 40px;
+  width: 100%;
+  flex: 1;
+}
+
+.search select,
+.search input {
+  padding: 10px;
+  font-weight: bold;
+  outline: 1px solid white;
 }
 
 .search select {
-  background-color: #e6e6e6;
   border: none;
-  padding: 0 10px;
-  font-size: 14px;
-  color: #111;
 }
 
 .search input {
-  flex: 1;
-  border: none;
-  outline: none;
-  padding: 0 10px;
-  font-size: 14px;
+  border: 1px solid white;
+  width: 100%;
+  margin-right: -2px;
 }
 
 .search svg {
-  background-color: #febd69;
-  padding: 10px;
-  font-size: 20px;
-  color: #111;
-  cursor: pointer;
+  padding: 7px;
+  background: #febd69;
+  color: #1a1a1a;
 }
 
 .search svg:hover {
   background-color: #d49644;
 }
 
-/* Order Section */
+.search:focus-within {
+  border: 2px solid rgb(235, 161, 173);
+}
+
 .order__container {
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  max-width: 450px;
+  gap: 10px;
 }
 
 .order__container a {
   text-decoration: none;
   color: white;
-  display: flex;
-  flex-direction: column;
-  font-size: 12px;
 }
 
-.order__container a span {
-  font-weight: bold;
-  font-size: 13px;
+.logo__container p {
+  font-size: 10px;
 }
 
-/* Language */
 .language {
+  width: 100px;
   display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.language img {
-  width: 20px;
-  height: 15px;
-  object-fit: cover;
+  padding: 10px;
 }
 
 .language select {
-  background-color: transparent;
+  background-color: #1a1a1a;
   border: none;
   color: white;
-  font-weight: bold;
-  font-size: 12px;
 }
 
-/* Cart */
-.cart {
-  position: relative;
-  display: flex;
-  align-items: center;
+.language img {
+  width: 40%;
 }
 
 .cart span {
   position: absolute;
-  top: -5px;
-  left: 18px;
-  font-size: 12px;
   font-weight: bold;
-  background-color: orange;
-  color: #111;
-  border-radius: 50%;
-  padding: 2px 6px;
+  top: -20px;
+  font-size: 20px;
+  background-color: #1a1a1a;
+  left: 10px;
+  color: orange;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+.cart {
+  position: relative;
+}
+
+/*to appear box on header menu */
+.order__container a:hover,
+.delivery:hover,
+.logo__container a:hover,
+.lower__container ul li:hover {
+  border: 1px solid white;
+  border-radius: 3px;
+
+}
+
+/*LowerHeader style */
+
+.lower__container {
+  background-color: #232f3e;
+  color: white;
+}
+
+.lower__container ul {
+  display: flex;
+  list-style: none;
+  gap: 5px;
+}
+
+.lower__container ul li {
+  padding: 8px;
+}
+
+.lower__container ul li:first-child {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+@media screen and (max-width: 576px) {
   .header__container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+    display: flex;
+    flex-direction: column !important;
+    height: auto;
   }
-
-  .search {
-    width: 100%;
+  .lower__container ul li:not(:first-child) {
+    display: none;
   }
-
-  .order__container {
-    justify-content: space-between;
-    width: 100%;
+  .language {
+    display: none;
   }
 }

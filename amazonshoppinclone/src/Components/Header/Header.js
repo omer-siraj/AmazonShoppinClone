@@ -3,6 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import { SlLocationPin } from "react-icons/sl";
 import { IoCartOutline } from "react-icons/io5";
 import classes from './Header.module.css';
+import LowerHeader from './LowerHeader';
 
 const Header = () => {
   return (
@@ -30,7 +31,7 @@ const Header = () => {
               <option value=''>All</option>
             </select>
             <input type='text' />
-            <FaSearch size={25} />
+            <FaSearch size={40} />
           </div>
 
           <div className={classes.order__container}>
@@ -58,6 +59,7 @@ const Header = () => {
           </div>
         </div>
       </section>
+      <LowerHeader />
     </>
   );
 };
