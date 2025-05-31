@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #131921;
+  color: white;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo__container img {
+  width: 100px;
+  object-fit: contain;
+}
+
+/* Delivery Section */
+.delivery {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+}
+
+.delivery svg {
+  font-size: 20px;
+}
+
+.delivery p {
+  font-size: 11px;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.delivery span:last-child {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Search Bar */
+.search {
+  display: flex;
+  flex: 1;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 40px;
+}
+
+.search select {
+  background-color: #e6e6e6;
+  border: none;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #111;
+}
+
+.search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.search svg {
+  background-color: #febd69;
+  padding: 10px;
+  font-size: 20px;
+  color: #111;
+  cursor: pointer;
+}
+
+.search svg:hover {
+  background-color: #d49644;
+}
+
+/* Order Section */
+.order__container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.order__container a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.order__container a span {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* Language */
+.language {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.language img {
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+}
+
+.language select {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* Cart */
+.cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart span {
+  position: absolute;
+  top: -5px;
+  left: 18px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: orange;
+  color: #111;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header__container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .order__container {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
