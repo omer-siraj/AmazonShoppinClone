@@ -115,19 +115,20 @@
   width: 40%;
 }
 
-.cart span {
-  position: absolute;
-  font-weight: bold;
-  top: -20px;
-  font-size: 20px;
-  background-color: #1a1a1a;
-  left: 10px;
-  color: orange;
-}
-
 .cart {
   position: relative;
 }
+
+.cart span {
+  position: absolute;
+  font-weight: bold;
+  top: -4px;
+  font-size: 15px;
+  background-color: #1a1a1a;
+  left: 14px;
+  color: orange;
+}
+
 
 /*to appear box on header menu */
 .order__container a:hover,
