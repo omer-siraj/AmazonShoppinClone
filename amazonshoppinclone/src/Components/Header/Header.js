@@ -44,10 +44,13 @@ const Header = () => {
               </select>
             </Link>
 
-            <Link to='/cart' className={classes.cart}>
+            <Link to='/auth' className={classes.cart}>
+            
+
               <p>Sign In</p>
               <span>Account & List</span>
             </Link>
+
 
             <Link to='/Orders'>
               <p>returns</p>

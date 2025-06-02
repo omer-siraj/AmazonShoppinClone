@@ -5,21 +5,24 @@ import classes from './Product.module.css';
 import {Link} from 'react-router-dom'
 
 
-const ProductCard = ({product}) => {
+const ProductCard = ({product, flex, renderDesc}) => {
     const {image, title, id, rating, price, description} = product;
   return (
-    <div className={`${classes.card__container}`}>
+    <div className={`${classes.card__container} ${flex?classes.product__flexed : ''}`}>
         <Link to={`/product/${id}`}>
             <img src={image} alt='' />
         </Link>
 
         <div>
             <h3>{title}</h3>
+            {renderDesc && <div style={{maxWidth:"750px"}}>{description}</div>}
             <div className={classes.rating}>
                 {/*rating*/}
                 <Rating value={rating.rate} precision={0.1}/>
                 {/*count*/}
-                <smal>{rating.count}</smal>
+
+                <small>{rating.count}</small> // 
+
             </div>
             <div>
                 {/*price*/}

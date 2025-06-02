@@ -1,3 +1,27 @@
+// export const CategoryInfos = [
+//   {
+//     title: 'Electronics',
+//     name: 'electronics',
+//     imgLink: 'https://picsum.photos/300/200?random=1',
+//   },
+//   {
+//     title: 'Discover Fashion Trends',
+//     name: 'fashion',
+//     imgLink: 'https://picsum.photos/300/200?random=2',
+//   },
+//   {
+//     title: "Men's Clothing",
+//     name: 'mens-clothing',
+//     imgLink: 'https://picsum.photos/300/200?random=3',
+//   },
+//   {
+//     title: 'Jewelry',
+//     name: 'jewelery',
+//     imgLink: 'https://picsum.photos/300/200?random=4',
+//   },
+// ];
+
+
 export const CategoryInfos = [
   {
     title: 'Electronics',
@@ -5,13 +29,13 @@ export const CategoryInfos = [
     imgLink: 'https://picsum.photos/300/200?random=1',
   },
   {
-    title: 'Discover Fashion Trends',
-    name: 'fashion',
+    title: "Men's Clothing",
+    name: "men's clothing",
     imgLink: 'https://picsum.photos/300/200?random=2',
   },
   {
-    title: "Men's Clothing",
-    name: 'mens-clothing',
+    title: "Women's Clothing",
+    name: "women's clothing",
     imgLink: 'https://picsum.photos/300/200?random=3',
   },
   {

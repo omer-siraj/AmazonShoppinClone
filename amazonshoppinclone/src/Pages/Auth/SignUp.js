@@ -1,14 +1,32 @@
-import React from 'react'
-import classes from './SignUp.module.css'
-import LayOut from '../../Components/LayOut/LayOut'
+// import React from 'react'
+// import classes from './SignUp.module.css'
+// import LayOut from '../../Components/LayOut/LayOut'
 
+
+// const SignUp = () => {
+//   return (
+  
+
+//     <LayOut>
+//         <div>SignUp</div>
+//     </LayOut>
+//   )
+// }
+
+// export default SignUp
+
+import React from 'react';
+import classes from './SignUp.module.css';
+import LayOut from '../../Components/LayOut/LayOut';
 
 const SignUp = () => {
   return (
     <LayOut>
-        <div>Sign</div>
+      <div className={classes.signup__container}>
+        <div>SignUp</div>
+      </div>
     </LayOut>
-  )
-}
+  );
+};
 
-export default SignUp
+export default SignUp;
