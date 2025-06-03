@@ -1,22 +1,7 @@
 .App {
   text-align: center;
 }
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+*{
   margin: 0;
   padding: 0;
-}
-
-
-.App {
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-/* index.css or App.css */
-:root {
-  --primary-color: orange;
-  --primary-shade: darkorange;
 }

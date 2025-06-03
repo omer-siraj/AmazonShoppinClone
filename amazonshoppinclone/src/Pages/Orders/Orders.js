@@ -1,13 +1,12 @@
-
-import React from 'react'
-import LayOut from '../../Components/LayOut/LayOut'
+import React from 'react';
+import LayOut from '../../LayOut/LayOut';
 
 const Orders = () => {
   return (
-    <LayOut>
+    <LayOut>  
       <div>Orders</div>
     </LayOut>
-  )
-}
+  );
+};
 
-export default Orders
+export default Orders;

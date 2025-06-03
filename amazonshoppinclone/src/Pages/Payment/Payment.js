@@ -1,10 +1,13 @@
 import React from 'react';
-import LayOut from '../../Components/LayOut/LayOut';
+
+import LayOut from '../../LayOut/LayOut';
 
 const Payment = () => {
   return (
     <LayOut>
-      <div>payment</div>
+      <div className={classes.payments}>
+        Payments
+      </div>
     </LayOut>
   );
 };
