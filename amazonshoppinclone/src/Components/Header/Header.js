@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaSearch } from "react-icons/fa";
 import { SlLocationPin } from "react-icons/sl";
 import { IoCartOutline } from "react-icons/io5";
 import classes from './Header.module.css';
 import LowerHeader from './LowerHeader';
 import {Link} from 'react-router-dom';
+import { DataContext } from '../DataProvider/DataProvider';
 
 
 const Header = () => {
+  const [[basket], dispatch]=useContext(DataContext)
+  
   return (
     <>
       <section>
@@ -33,7 +36,7 @@ const Header = () => {
               <option value=''>All</option>
             </select>
             <input type='text' />
-            <FaSearch size={40} />
+            <FaSearch size={25} />
           </div>
 
           <div className={classes.order__container}>
@@ -44,9 +47,8 @@ const Header = () => {
               </select>
             </Link>
 
-            <Link to='/auth' className={classes.cart}>
+            <Link to='/auth'>
             
-
               <p>Sign In</p>
               <span>Account & List</span>
             </Link>
@@ -59,7 +61,7 @@ const Header = () => {
 
             <Link to='/' className={classes.cart}>
               <IoCartOutline size={25} />
-              <span>0</span>
+              <span>{basket.length}</span>
             </Link>
           </div>
         </div>
