@@ -1,5 +1,8 @@
 import React from 'react';
-import LayOut from '../../LayOut/LayOut';
+
+
+import LayOut from '../../Components/LayOut/LayOut';
+
 
 const Orders = () => {
   return (

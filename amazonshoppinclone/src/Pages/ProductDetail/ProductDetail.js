@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import classes from './ProductDetail.module.css';
-import LayOut from '../../LayOut/LayOut';
+
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { productUrl } from '../../Api/endPoints';
 import ProductCard from '../../Components/Product/ProductCard';
-import Loader from '../../Loader/Loader';
+import LayOut from '../../Components/LayOut/LayOut';
+import Loader from '../../Components/Loader/Loader';
+
+
 
 const ProductDetail = () => {
   const { productId } = useParams();

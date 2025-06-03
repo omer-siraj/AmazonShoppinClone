@@ -1,15 +1,12 @@
 import React, { createContext, useReducer } from 'react';
-import { DataContext } from './path-to/DataProvider';
 
+export const DataContext = createContext();
 
-
-const [state = {}] = useContext(DataContext) || [];
-const basket = state.basket || [];
-
-
-
-export const DataProvider = ({ reducer, initialState, children }) => (
-  <DataContext.Provider value={useReducer(reducer, initialState)}>
-    {children}
-  </DataContext.Provider>
-);
+export const DataProvider = ({ reducer, initialState, children }) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    <DataContext.Provider value={[state, dispatch]}>
+      {children}
+    </DataContext.Provider>
+  );
+};

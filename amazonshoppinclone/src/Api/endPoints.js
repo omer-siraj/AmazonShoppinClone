@@ -1,6 +1,8 @@
 
 
 
-export const productUrl = 'https://fakestoreapi.com/products/categories';
+
+
+export const productUrl = 'https://fakestoreapi.com';
 
 

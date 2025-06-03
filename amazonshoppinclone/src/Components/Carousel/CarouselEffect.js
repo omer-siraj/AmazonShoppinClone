@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import { img } from './data';
+import { img } from './data'; // ✅ renamed to avoid conflict
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; 
 
 const CarouselEffect = () => {

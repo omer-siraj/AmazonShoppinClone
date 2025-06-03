@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import LayOut from '../../Pages/Cart/Cart';
+import LayOut from '../../Components/LayOut/LayOut'; // ✅ corrected import
 import { DataContext } from '../../Components/DataProvider/DataProvider';
 import ProductCard from '../../Components/Product/ProductCard';
 import CurrencyFormat from '../../Components/CurrencyFormat/CurrencyFormat';
@@ -70,7 +70,7 @@ const Cart = () => {
         {basket?.length !== 0 && (
           <div>
             <div className={classes.subtotal}>
-              <p>Subtotal ({basket?.length} item)</p>
+              <p>Subtotal ({basket?.length} item{basket.length > 1 ? 's' : ''})</p>
               <CurrencyFormat amount={total} />
             </div>
             <span>
